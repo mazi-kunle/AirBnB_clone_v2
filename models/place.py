@@ -52,8 +52,8 @@ class Place(BaseModel, Base):
 
             review_list = []
 
-            for review in models.storage.all(Review):
-                if Review.place_id == self.id:
+            for review in models.storage.all(Review).values():
+                if review.place_id == self.id:
                     review_list.append(review)
 
             return review_list
