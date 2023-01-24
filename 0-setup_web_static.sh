@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # configure a web server for thr deployment of web_static
-sudo apt-get update
+sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo mkdir -p /data/
 sudo mkdir -p /data/web_static/releases/
