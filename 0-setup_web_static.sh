@@ -5,6 +5,7 @@ sudo apt-get -y install nginx
 sudo mkdir -p /data/
 sudo chmod -R 766 /data/
 sudo mkdir -p /data/web_static/releases/
+sudo chmod -R 766 /data/web_static/
 sudo mkdir -p /data/web_static/shared/
 sudo mkdir -p /data/web_static/releases/test/
 sudo chown -R ubuntu:ubuntu /data/
