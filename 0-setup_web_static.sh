@@ -17,5 +17,3 @@ echo "<html>
 sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 sudo sed -i '29 a\\tlocation /hbnb_static {\n\t\talias /data/web_static/current/;\n\t}' /etc/nginx/sites-available/default
 sudo service nginx restart
-~
-
