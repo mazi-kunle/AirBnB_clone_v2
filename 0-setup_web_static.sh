@@ -3,6 +3,7 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo mkdir -p /data/
+sudo chmod -R 766 /data/
 sudo mkdir -p /data/web_static/releases/
 sudo mkdir -p /data/web_static/shared/
 sudo mkdir -p /data/web_static/releases/test/
