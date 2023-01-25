@@ -14,7 +14,7 @@ def do_pack():
                                 now.minute, now.second)
     version = local('mkdir -p versions')
     file_ = 'versions/web_static_{}.tgz'.format(opt)
-    check = local('tar -czvf {} /AirBnB_clone_v2/web_static/'.format(file_))
+    check = local('tar -czvf {} web_static'.format(file_))
 
     if check.succeeded:
         return os.path.relpath(file_)
