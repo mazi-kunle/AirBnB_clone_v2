@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-'''This is a module containing fabric configuration'''
+"""This is a module containing fabric configuration"""
 
-from fabric.api import *
+from fabric.api import local
 from datetime import datetime
 import os
 
 
 def do_pack():
-    '''A function that generates a .tgz archive'''
+    """A function that generates a .tgz archive"""
 
     now = datetime.now()
     opt = '{}{}{}{}{}{}'.format(now.year, now.month, now.day, now.hour,
