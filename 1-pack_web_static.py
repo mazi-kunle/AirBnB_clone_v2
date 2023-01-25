@@ -7,10 +7,8 @@ import os
 
 
 def do_pack():
-    '''
-    A function that generates a .tgz archivw
-    from the contents of the web_static folder
-    '''
+    '''A function that generates a .tgz archive'''
+
     now = datetime.now()
     opt = '{}{}{}{}{}{}'.format(now.year, now.month, now.day, now.hour,
                                 now.minute, now.second)
