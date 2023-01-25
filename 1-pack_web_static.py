@@ -13,8 +13,8 @@ def do_pack():
     opt = '{}{}{}{}{}{}'.format(now.year, now.month, now.day, now.hour,
                                 now.minute, now.second)
     version = local('mkdir -p versions')
-    file_ = f'versions/web_static_{opt}.tgz'
-    check = local(f'tar -czvf {file_} /AirBnB_clone_v2/web_static/')
+    file_ = 'versions/web_static_{}.tgz'.format(opt)
+    check = local('tar -czvf {} /AirBnB_clone_v2/web_static/'.format(file_))
 
     if check.succeeded:
         return os.path.relpath(file_)
