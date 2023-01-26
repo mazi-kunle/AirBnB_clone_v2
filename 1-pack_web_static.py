@@ -17,5 +17,5 @@ def do_pack():
     check = local('tar -czvf {} web_static'.format(file_))
 
     if check.succeeded:
-        return os.path.relpath(file_)
+        print(os.path.relpath(file_))
     return None
