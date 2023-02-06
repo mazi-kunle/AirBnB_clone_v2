@@ -28,7 +28,7 @@ def cisfun(text):
     '''
     display c <text>
     '''
-    return f'C {text}'
+    return 'C {}'.format(text)
 
 
 if __name__ == '__main__':
