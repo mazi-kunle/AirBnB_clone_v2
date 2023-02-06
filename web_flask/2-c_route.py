@@ -2,6 +2,7 @@
 '''This is a module'''
 
 from flask import Flask
+from markupsafe import escape
 
 
 app = Flask(__name__)
@@ -28,7 +29,7 @@ def cisfun(text):
     '''
     display c <text>
     '''
-    return 'C {}'.format(text)
+    return 'C {}'.format(escape(text.replace('_', ' ')))
 
 
 if __name__ == '__main__':
