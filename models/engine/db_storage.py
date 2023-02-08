@@ -97,6 +97,6 @@ class DBStorage:
 
     def close(self):
         '''
-        A method thst calls the remove method
+        Close the working SQLALCHEMY session.
         '''
-        self.___session.remove()
+        self.__session.close()
