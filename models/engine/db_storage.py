@@ -50,17 +50,17 @@ class DBStorage:
             cls_obj = self.__session.query(cls)
 
             for i in cls_obj:
-                key = f'{cls.__name__}.{i.id}'
+                key = f'{type(i).__name__}.{i.id}'
                 val = i
                 cls_dict[key] = val
 
         else:
             for cls in objects:
                 cls_dict = {}
-                cls_obj = self.__session.query(eval(cls))
+                cls_objs = self.__session.query(eval(cls)).all()
 
-                for i in cls_obj:
-                    key = f'{cls.__name__}.{i.id}'
+                for i in cls_objs:
+                    key = f'{type(i).__name__}.{i.id}'
                     val = i
                     cls_dict[key] = val
 
