@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<HTML lang="en">
+    <HEAD>
+        <TITLE>HBNB</TITLE>
+    </HEAD>
+    <BODY>
+	<H1>States</H1>
+	<UL>
+	{% for i in storage %}
+	    <LI>{{ i.id }}: <B>{{ i.name }}</B></LI>
+	        <UL>
+		{% for j in i.cities %}
+		    <LI>{{ j.id }}: <B>{{ j.name }}</B></LI>
+		{% endfor %}
+	{% endfor %}
+	</UL>
+    </BODY>
+</HTML>
