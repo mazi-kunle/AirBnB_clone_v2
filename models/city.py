@@ -9,7 +9,7 @@ from models.place import Place
 class City(BaseModel, Base):
     """ The city class, contains state ID and name """
     __tablename__ = 'cities'
-    name = Column(String(128, collation='utf8mb4_0900_ai_ci'), nullable=False)
-    state_id = Column(String(60, collation='utf8mb4_0900_ai_ci'), ForeignKey('states.id'), nullable=False)
+    name = Column(String(128, collation='latin1_swedish_ci'), nullable=False)
+    state_id = Column(String(60, collation='latin1_swedish_ci'), ForeignKey('states.id'), nullable=False)
     places = relationship('Place', backref='cities',
                           cascade='all, delete, delete-orphan')
