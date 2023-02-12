@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<HTML lang="en">
+    <HEAD>
+        <TITLE>HBNB</TITLE>
+    </HEAD>
+    <BODY>
+    {% if storage is mapping %}
+        <H1>States</H1>
+	<UL>
+	{% for i in storage.values()|sort(attribute="name") %}
+	    <LI>{{ i.id }}: <B>{{ i.name }}</B></LI>
+	{% endfor %}
+	</UL>
+    {% elif storage is defined %}
+        <H1>State: {{ storage.name }}</H1>
+	<H3>Cities:</H3>
+	<UL>
+	{% for city in storage.cities|sort(attribute="name") %}
+	    <LI>City: {{ city.id }}: <B>{{ city.name }}</B></LI>
+        {% endfor %}
+	</UL>
+    {% else %}
+	<H1>Not found!</H1>
+    {% endif %}
+    </BODY>
+</HTML>
